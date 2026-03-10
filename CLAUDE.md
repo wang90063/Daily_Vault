@@ -40,3 +40,58 @@ Act as Knowledge Manager and Daily Planner. Capture, connect, and organize knowl
 - Daily notes link to projects; projects track progress in daily notes
 - No empty line after frontmatter `---` (it becomes visible in body)
 - 必须使用中文与用户进行交流，所有生成的文件也必须为中文。
+
+## 开发流 — OrbitOS 自身迭代
+
+OrbitOS 存在两条流：**使用流**（日常笔记、日记等内容变更）和 **开发流**（对系统本身的变更）。以下规范仅适用于开发流。
+
+### 计划驱动开发
+
+每次开发遵循固定流程：
+1. **制定计划**：在 `90_计划/` 创建 `dev-功能名.md`（使用 `Dev_Plan_Template.md`）
+2. **创建分支**：从 `main` 创建 `dev/功能名` 分支
+3. **按步骤执行**：每完成一步，勾选 checklist `- [x]`
+4. **验证**：按验收标准检查
+5. **合并**：合并到 `main`，更新 `CHANGELOG.md`
+6. **归档计划**：将计划文档移至 `90_计划/归档/`，status 改为 `done`
+
+### 分支策略
+
+```
+main          ← 稳定版，日常使用基于此分支
+  └─ dev/*    ← 开发分支（如 dev/new-skill-xxx, dev/template-refactor）
+```
+
+- `main` 始终保持可用状态
+- 开发新功能时从 `main` 创建 `dev/功能名` 分支
+- 开发完成、验证通过后合并回 `main`
+
+### Commit 约定
+
+| 前缀 | 用途 | 示例 |
+|------|------|------|
+| `feat:` | 新功能（新 Skill、新模板） | `feat: 添加 /weekly-review skill` |
+| `fix:` | 修复问题 | `fix: 修复日记模板日期格式` |
+| `refactor:` | 重构（不改功能） | `refactor: 统一模板 frontmatter 格式` |
+| `docs:` | 文档变更 | `docs: 更新 DEV.md 开发指南` |
+| `content:` | 日常内容变更 | `content: 添加日记和收件箱笔记` |
+
+### 系统文件范围
+
+开发流的修改对象（系统文件）：
+- `.agents/skills/` — Skill 定义
+- `.claude/`, `.gemini/`, `.codex/` — CLI 配置
+- `99_系统/模板/` — 模板文件
+- `99_系统/提示词/` — 提示词
+- `99_系统/数据库/` — Obsidian Base 定义
+- `CLAUDE.md`, `AGENTS.md`, `GEMINI.md` — Agent 指令
+- `DEV.md`, `CHANGELOG.md` — 开发文档
+- `.gitignore` — Git 配置
+
+### 开发验证
+
+每次开发完成后需确认：
+- [ ] 功能按验收标准正常工作
+- [ ] 不影响现有使用流
+- [ ] `CHANGELOG.md` 已更新
+- [ ] 计划文档已归档
