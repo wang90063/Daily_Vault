@@ -7,6 +7,17 @@
 # Track .gitignore itself
 !.gitignore
 
+# Track root agent configs for this vault
+!.agents/
+!.agents/**
+
+!.gemini/
+.gemini/*
+!.gemini/commands/
+!.gemini/commands/**
+!.gemini/settings.json
+.gemini/skills
+
 # Track Claude, Codex, Gemini and Agents configs in language folders
 !EN/.claude/
 EN/.claude/*
