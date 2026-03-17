@@ -22,7 +22,7 @@ status: complete
 
 ### 2. 技能激活 (Skill Activation)
 - **触发条件**: 用户在对话中输入特定命令，如 `/start-my-day`, `/kickoff`, `/research`。
-- **机制**: OrbitOS 在 `.claude/skills/` 目录下存放了多个子目录，每个目录代表一个”技能包”，其中包含一个 `SKILL.md` 文件。当用户触发命令时，对应的 `SKILL.md` 内容会被提取并包裹在 `<command-name>` 和技能提示词标签内注入到当前对话中。
+- **机制**: OrbitOS 以 `.agents/skills/` 作为技能单一来源目录，每个子目录代表一个”技能包”，其中包含一个 `SKILL.md` 文件。Claude、Gemini、Codex 如需兼容各自的 `skills` 路径，均统一指向该目录。当用户触发命令时，对应的 `SKILL.md` 内容会被提取并包裹在 `<command-name>` 和技能提示词标签内注入到当前对话中。
 - **作用**: 提供当前任务的**高优先级专门指令**，覆盖或补充全局规则，使通用型 Agent 瞬间转变为”每日规划师”或”研究协调员”。
 
 ### 3. 标准化工作流驱动 (Workflow Driven)
@@ -46,7 +46,7 @@ status: complete
 
 2.  **第二阶段: 技能激活 (Skill Activation)**
     - 用户输入 `/kickoff 00_收件箱/新点子.md`。
-    - CLI 识别出 `/kickoff` 命令，从 `.claude/skills/kickoff/SKILL.md` 中提取专门指令并加载。
+    - CLI 识别出 `/kickoff` 命令，从 `.agents/skills/kickoff/SKILL.md`（或等价兼容路径）中提取专门指令并加载。
     - **Agent 的状态更新**: 激活”项目经理 (Project Manager)”人格，加载 `/kickoff` 专属工作流。
 
 3.  **第三阶段: 工作流驱动 - 规划 (Planning)**

@@ -38,6 +38,7 @@ Act as Knowledge Manager and Daily Planner. Capture, connect, and organize knowl
 - Projects link to Areas via frontmatter, NOT folder hierarchy
 - Use wikilinks `[[NoteName]]` liberally
 - Daily notes link to projects; projects track progress in daily notes
+- Skills 的唯一源目录是 `.agents/skills/`；`.claude/skills`、`.codex/skills`、`.gemini/skills` 仅作为指向该目录的兼容路径
 - No empty line after frontmatter `---` (it becomes visible in body)
 - 必须使用中文与用户进行交流，所有生成的文件也必须为中文。
 
@@ -80,7 +81,7 @@ main          ← 稳定版，日常使用基于此分支
 
 开发流的修改对象（系统文件）：
 - `.agents/skills/` — Skill 定义
-- `.claude/`, `.gemini/`, `.codex/` — CLI 配置
+- `.claude/`, `.gemini/`, `.codex/` — CLI 配置（其中 `skills` 路径统一指向 `.agents/skills/`）
 - `99_系统/模板/` — 模板文件
 - `99_系统/提示词/` — 提示词
 - `99_系统/数据库/` — Obsidian Base 定义

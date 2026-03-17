@@ -2,6 +2,12 @@
 
 本文件记录 OrbitOS 系统的版本变更。日常内容变更不记录在此。
 
+## Unreleased
+
+### 调整
+- 统一 Claude、Gemini、Codex 的 skill 路径约定，以 `.agents/skills/` 作为唯一源目录
+- 更新 Agent 指令与开发文档，明确 `.claude/skills`、`.codex/skills`、`.gemini/skills` 为兼容路径
+
 ## v0.2.0 — 2026-03-10
 
 ### 新增

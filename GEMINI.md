@@ -38,5 +38,6 @@ Act as Knowledge Manager and Daily Planner. Capture, connect, and organize knowl
 - Projects link to Areas via frontmatter, NOT folder hierarchy
 - Use wikilinks `[[NoteName]]` liberally
 - Daily notes link to projects; projects track progress in daily notes
+- Skills 的唯一源目录是 `.agents/skills/`；`.claude/skills`、`.codex/skills`、`.gemini/skills` 仅作为指向该目录的兼容路径
 - No empty line after frontmatter `---` (it becomes visible in body)
 - 必须使用中文与用户进行交流，所有生成的文件也必须为中文。
