@@ -1,0 +1,4 @@
+# 反思复盘工作流
+
+description = "复盘 AI agent 在一次交互中的失误，提炼原因、修正点与防错规则"
+prompt = "使用 reflect skill 复盘这个案例：{prompt}"
