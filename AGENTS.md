@@ -27,6 +27,7 @@ Act as Knowledge Manager and Daily Planner. Capture, connect, and organize knowl
 `/ask` - Quick answers without heavy note-taking
 `/parse-knowledge` - Unstructured text → vault
 `/archive` - Clean up completed items
+`/dev-commit` - 按 DEV.md 处理系统文件提交、分支与推送
 
 **Technical:**
 `obsidian-markdown`, `obsidian-bases`, `json-canvas` - Obsidian features

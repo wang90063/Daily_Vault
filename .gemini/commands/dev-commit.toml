@@ -1,0 +1,4 @@
+# Development commit workflow
+
+description = "Commit and push OrbitOS system-file changes following DEV.md"
+prompt = "Use the dev-commit skill. Scope: {prompt}"
