@@ -65,3 +65,6 @@ CN/.codex/*
 
 # Log files
 *.log
+
+# Ignore archived system artifacts
+99_系统/归档/

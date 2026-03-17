@@ -1,0 +1,4 @@
+# 轻量进度更新
+
+description = "轻量化整理一次项目进度更新，只提炼现状、已完成、下一步与阻塞，不扩展任务"
+prompt = "使用 update-progress skill 轻量化整理这次进度更新：{prompt}"

@@ -7,10 +7,14 @@
 ### 调整
 - 统一 Claude、Gemini、Codex 的 skill 路径约定，以 `.agents/skills/` 作为唯一源目录
 - 更新 Agent 指令与开发文档，明确 `.claude/skills`、`.codex/skills`、`.gemini/skills` 为兼容路径
+- `/update-progress` skill 补充写回规则：支持归档中间物、将日记进展关联待办事项、将项目进展关联到对应步骤，并在不确定时直接向用户确认
+- 忽略 `99_系统/归档/` 下的归档产物，避免系统开发提交误带中间文件
 
 ### 新增
 - `/dev-commit` skill，用于按 `DEV.md` 处理系统文件的分支、提交与推送
 - 开发规范补充“修改系统文件前先创建本地 `dev/*` 分支”的硬性要求
+- `/reflect` skill，用于复盘 AI agent 在一次交互中的失误，输出错误原因、修正点与防错规则
+- `/update-progress` skill，用于轻量化整理项目进度更新，只同步现状、重点与阻塞，不自动展开任务
 
 ## v0.2.0 — 2026-03-10
 

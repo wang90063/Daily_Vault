@@ -25,6 +25,8 @@ Act as Knowledge Manager and Daily Planner. Capture, connect, and organize knowl
 `/kickoff` - Idea → project
 `/research` - Deep dive → Areas + Wiki (two-agent workflow)
 `/ask` - Quick answers without heavy note-taking
+`/update-progress` - 轻量化整理一次项目进度更新，只同步现状、重点与阻塞，不自动展开任务
+`/reflect` - 复盘 agent 在一次交互中的失误，输出错误原因、修正点与防错规则
 `/parse-knowledge` - Unstructured text → vault
 `/archive` - Clean up completed items
 `/dev-commit` - 按 DEV.md 处理系统文件提交、分支与推送
