@@ -4,24 +4,15 @@
 
 > 一个 **AI 驱动**的个人生产力系统——让 AI 助手帮你打理**知识管理**和**每日规划**。
 
-![Screenshot](CN/50_资源/Screenshot.png)
-
 ## 安装
 
 **方式一：Git Sparse Checkout**（仅下载中文版本）
 
 ```bash
-git clone --filter=blob:none --sparse https://github.com/MarsWang42/OrbitOS.git my-vault
-cd my-vault
-git sparse-checkout set CN
-mv CN/* CN/.* . 2>/dev/null; rmdir CN
+
+git clone https://github.com/wang90063/Daily_Vault.git
 ```
 
-**方式二：使用 degit**（无 git 历史，更简单）
-
-```bash
-npx degit MarsWang42/OrbitOS/CN my-vault
-```
 
 ---
 
@@ -29,7 +20,7 @@ npx degit MarsWang42/OrbitOS/CN my-vault
 
 OrbitOS 是一个基于 Obsidian 的生产力框架，核心理念很简单：**你是中心，万物围绕你运转**。项目、知识、日常任务如同行星一般环环相扣、持续演进——而管理这一切，只需用自然语言和 AI 聊聊天。
 
-传统笔记系统需要你亲力亲为地整理归档，OrbitOS 则不同——它让 **Claude Code** 或 **Gemini CLI** 充当你的智能知识管家和每日规划师。AI 不只是帮你存东西，它会主动：
+传统笔记系统需要你亲力亲为地整理归档，OrbitOS 则不同——它让 **Claude Code** 或 **Codex CLI** 充当你的智能知识管家和每日规划师。AI 不只是帮你存东西，它会主动：
 
 - **捕捉灵感**，把零散想法变成结构清晰、可执行的项目
 - **规划每日**，基于你手头的工作给出有针对性的建议
