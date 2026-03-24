@@ -1,7 +1,7 @@
 ---
 type: content
 format: slides
-status: complete
+status: draft
 area: "[[分享表达]]"
 created: 2026-03-23
 tags:
@@ -134,9 +134,6 @@ AI 不是替我思考，而是替我维护系统
 
 **正文**
 - 都在同一个 Vault 根目录工作
-- 模型能力
-	- 规划能力：opus4.6>gpt5.4 xhigh/high>sonnet4.6
-	- 执行能力(写文本）：gpt5.4>sonnet4.6
 - 都看到同一套目录结构和 Markdown 文件
 - `AGENTS.md` 负责高层规则
 - `.agents/skills/` 负责工作流能力
