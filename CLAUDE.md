@@ -44,6 +44,7 @@ Act as Knowledge Manager and Daily Planner. Capture, connect, and organize knowl
 - Skills 的唯一源目录是 `.agents/skills/`；`.claude/skills`、`.codex/skills`、`.gemini/skills` 仅作为指向该目录的兼容路径
 - No empty line after frontmatter `---` (it becomes visible in body)
 - 必须使用中文与用户进行交流，所有生成的文件也必须为中文。
+- 不要主动将99_系统和90_计划中的归档文件读入请求，除非我主动提
 
 ## 开发流 — OrbitOS 自身迭代
 
