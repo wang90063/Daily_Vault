@@ -4,8 +4,6 @@ English | [中文](README_CN.md)
 
 > An **AI-powered** personal productivity system where **knowledge management** and **daily task planning** are intelligently orchestrated by your AI assistant.
 
-![Screenshot](EN/50_Resources/Screenshot.png)
-
 ## Installation
 
 **Option 1: Git Sparse Checkout** (downloads only English version)
